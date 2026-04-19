@@ -1,0 +1,18 @@
+allowed_actions:
+  - book_flight
+
+blocked_actions:
+  - cancel_all_flights
+  - transfer_funds
+  - send_email
+
+risk_levels:
+  book_flight: low
+  cancel_all_flights: high
+  transfer_funds: critical
+  send_email: medium
+
+rules:
+  - name: Prevent Goal Hijacking
+    description: Only allow actions aligned to original user intent
+    enforcement: strict
