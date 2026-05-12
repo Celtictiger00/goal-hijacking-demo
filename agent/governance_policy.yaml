@@ -1,3 +1,9 @@
+# AI Governance Policy
+# Control Owner: LOD1 — CTO Risk & Control
+# Framework Reference: EU AI Act
+# Review Cadence: Quarterly
+# Last Reviewed: 2026-Q1
+
 allowed_actions:
   - book_flight
 
@@ -16,3 +22,27 @@ rules:
   - name: Prevent Goal Hijacking
     description: Only allow actions aligned to original user intent
     enforcement: strict
+    eu_ai_act_ref: Article 9 - Risk Management System
+    control_owner: LOD1
+    review_cadence: quarterly
+
+  - name: Block High Risk Actions
+    description: Prevent execution of high and critical risk actions without escalation
+    enforcement: strict
+    eu_ai_act_ref: Article 14 - Human Oversight
+    control_owner: LOD1
+    review_cadence: quarterly
+
+  - name: Data Governance
+    description: Ensure only permitted data actions are executed
+    enforcement: strict
+    eu_ai_act_ref: Article 10 - Data and Data Governance
+    control_owner: LOD1
+    review_cadence: quarterly
+
+  - name: Audit Logging
+    description: All decisions must be logged for traceability and auditability
+    enforcement: strict
+    eu_ai_act_ref: Article 12 - Record Keeping
+    control_owner: LOD1
+    review_cadence: quarterly
